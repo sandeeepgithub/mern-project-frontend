@@ -43,7 +43,6 @@ function UserTileComponent({
             expand={expanded.toString()}
             onClick={() => {
               setExpanded(!expanded);
-              setOpenModal(false);
             }}
             sx={
               expanded

@@ -65,9 +65,8 @@ function Home() {
               ? users.map((el) => (
                   <Col
                     xs={12}
-                    sm={6}
-                    md={4}
-                    className="UserTile my-4 "
+                    md={3}
+                    className="UserTile m-4 "
                     key={el.name}
                     style={el.isActive ? null : { opacity: '0.3' }}
                   >

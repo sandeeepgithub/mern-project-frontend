@@ -1,30 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Button, CircularProgress, Typography } from '@mui/material';
-import {
-  Col,
-  FormControl,
-  Modal,
-  ModalBody,
-  Row,
-  Toast,
-} from 'react-bootstrap';
+import { Backdrop, Button, CircularProgress, Typography } from '@mui/material';
+import { Col, FormControl, Modal, ModalBody, Row } from 'react-bootstrap';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
 
-import ToastComponent from './ToastComponent';
-
 function ModalComponent({ openModal, setOpenModal }) {
-  const [show, setShow] = useState(false); // show modal
-  const [textbox, setTextbox] = useState(false); // show password input field
-  const [adminPwd, setAdminPwd] = useState(''); // add pwd
-  const [checkPassword, setCheckPassword] = useState(false); // loader to show pwd check
-  const [toast, setToast] = useState(null); // for success/error message after check pwd
-
+  const [show, setShow] = useState(false);
+  const [textbox, setTextbox] = useState(false);
+  const [adminPwd, setAdminPwd] = useState('');
+  const [checkPassword, setCheckPassword] = useState(false);
   const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    borderRadius: '10px',
   };
 
   useEffect(() => {
@@ -32,23 +20,16 @@ function ModalComponent({ openModal, setOpenModal }) {
   }, [openModal]);
 
   const pwdHandler = () => {
-    if (adminPwd.trim().length > 0) {
+    if (adminPwd.trim() !== '') {
       setAdminPwd(false);
       setCheckPassword(true);
       setTimeout(() => {
         {
           setCheckPassword(false);
-          if (adminPwd === 'Arjun98790!') {
-            setTextbox(false);
-            setShow(false);
-            setToast(true);
-          } else {
-            setTextbox(false);
-            setShow(false);
-            setToast(false);
-          }
         }
       }, 3000);
+      if (adminPwd === 'Arjun98790!') {
+      }
     }
   };
   return (
@@ -105,10 +86,7 @@ function ModalComponent({ openModal, setOpenModal }) {
                   />
                 </Col>
               </Row>
-              <Row
-                className="mt-4 text-right"
-                style={textbox ? { display: 'none' } : { display: 'block' }}
-              >
+              <Row className="mt-4 text-right">
                 <Col>
                   <Button
                     size="small"
