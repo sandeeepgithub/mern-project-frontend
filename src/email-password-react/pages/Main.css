@@ -1,0 +1,68 @@
+body {
+  background: #ccc !important;
+}
+
+.Main {
+  text-align: center;
+}
+
+.Row {
+  height: 70px;
+}
+
+.Row-Button {
+  margin-top: 70px;
+}
+
+.Container {
+  border: 1px solid #aaa;
+  width: 80%;
+  box-shadow: 0 4px 4px #ccc;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background: #fff;
+}
+
+.Row-Fill {
+  height: 100%;
+}
+
+.Login-Box {
+  margin: 18px 10px;
+  padding: 5px;
+}
+
+.loginImageSide {
+  background-color: black;
+  border-radius: 0px 20px 20px 0px;
+}
+
+#Button {
+  color: #fff;
+  font-weight: 700;
+  transform: scale(1);
+  transition: all 0.5s ease;
+  background: #474554;
+}
+
+#Button:hover {
+  transform: scale(1.1);
+}
+
+#User {
+  border-radius: 20px;
+  box-shadow: 0 4px 2px 5px #aaa;
+  width: 15rem;
+}
+.UserTile {
+  border: 1px solid none;
+  border-radius: 25px;
+  border-radius: 15px;
+}
+
+.bio {
+  height: 100px !important;
+}
